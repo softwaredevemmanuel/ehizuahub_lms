@@ -4,3 +4,4 @@ export {default as StudentDashboard} from './StudentDashboard'
 export {default as TutorDashboard} from './TutorDashboard';
 export {default as TestPage} from './TestPage';
 export {default as AdminDashboard} from './AdminDashboard';
+export {default as Curriculum} from "./CreateCurriculum"

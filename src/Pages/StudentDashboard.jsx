@@ -37,6 +37,16 @@ function StudentDashboard() {
                
                <FaBars/>
                </div>
+               {/* Drop down for course outline */}
+               <div className="border h-[200px] flex justify-between">
+                  <div className='text-sm'>
+                    <p> - What is Html</p>
+                    <p> - What is Html</p>
+                  </div>
+                  <button className='border h-[50px] py-1 px-6 m-3'>Take Test</button>
+               </div>
+
+
                <div><span className='font-bold'>HTML 201:</span> Intermediate   </div>
                <div><span className='font-bold'>CSS 101:</span> Intro to CSS   </div>
                <div><span className='font-bold'>CSS 201:</span> Advanced CSS   </div>

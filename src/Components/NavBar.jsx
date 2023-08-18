@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Ehizua from "./assets/Ehizua-Hub-Logo-PNG-1536x211.png";
 import { Link } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ function NavBar() {
 
   return (
     <div className='flex justify-around items-center h-20 w-full px-24 bg-white-400 border-solid shadow-lg'>
-      <div className='text-[30px]'><img className='w-[150px]' src={Ehizua} alt='image'/></div>
+      <div className='text-[30px]'><img className='w-[150px]' src={Ehizua} alt='pivc'/></div>
       <div class="space-x-6 hidden lg:block text-blue-500 font-extrabold uppercase">
         {/* <a href="/">Home</a> */}
         <a href="#Courses">Courses</a>

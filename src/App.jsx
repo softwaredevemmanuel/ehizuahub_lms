@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Mainlayout } from './Components';
-import {StudentLogin, TutorDashboard, TestPage, AdminLogin, AdminDashboard, StudentDashboard} from './Pages'
+import {StudentLogin, TutorDashboard, TestPage, AdminLogin, AdminDashboard, StudentDashboard,Curriculum} from './Pages'
+
 // import AllCourses from './Pages/AllCourses';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='admin_login' element={<AdminLogin />} />
           <Route path='student_dashboard' element={<StudentDashboard />} />
           <Route path='admin_dashboard' element={<AdminDashboard />} />
+          <Route path='curriculum' element={<Curriculum />} />
           <Route path='test' element={<TestPage />} />
       
       </Routes>
