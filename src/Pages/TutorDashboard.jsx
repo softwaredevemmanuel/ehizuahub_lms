@@ -6,94 +6,90 @@ import { PiStudent } from "react-icons/pi";
 function TutorDashboard() {
   return (
     <div>
-      <nav className="flex justify-between px-16 items-center h-20 w-full bg-white-400 border-solid shadow-lg">
-        <div className="border border-black px-3 py-2">Home</div>
+      <nav className="flex justify-between px-16 items-center h-20 bg-blue-400 shadow-lg">
+        <div className="border border-black px-3 py-2 text-white">Home</div>
         <div className="space-x-6">
-          <Link className="border border-black px-3 py-2">
+          <Link className="border border-black px-3 py-2 text-white">
             Welcome Emmanuel
           </Link>
-          <Link to="/admin_login" className="border border-black px-3 py-2">LogOut</Link>
+          <Link
+            to="/admin_login"
+            className="border border-black px-3 py-2 text-white"
+          >
+            LogOut
+          </Link>
         </div>
       </nav>
 
-      <section className="h-[100vh] w-full  my-6 px-16  border  border-solid shadow-lg py-3">
+      <section className="h-[calc(100vh-80px)] w-full my-6 px-16 border shadow-lg py-3">
         <div className="text-xl">
-          <div className="flex m-3 space-x-6 ">
-            <div className=" border w-[30%] h-[800px] p-6  text-blue-500 justify-around">
+          <div className="flex m-3 space-x-6">
+            <div className="border w-[30%] h-[800px] p-6 bg-gray-100 text-blue-500">
               <Link className="flex justify-between items-center">
-                <div>All students</div>
-                <PiStudent />
+                <div className="font-bold">All students</div>
+                <PiStudent className="text-2xl" />
               </Link>
-              <Link to="/curriculum" className="flex justify-between items-center  ">
-                <div>Create Curriculum</div>
-                <BsFillJournalBookmarkFill />
+              <Link
+                to="/curriculum"
+                className="flex justify-between items-center"
+              >
+                <div className="font-bold">Create Curriculum</div>
+                <BsFillJournalBookmarkFill className="text-2xl" />
               </Link>
-              <Link to="/tutor_dashboard" className="flex justify-between items-center  border-blue-500 p-4 border-2 my-3">
-                <div>Create Test Questions</div>
-                <BsFillJournalBookmarkFill />
+              <Link
+                to="/tutor_dashboard"
+                className="flex justify-between items-center border-blue-500 p-4 border-2 my-3"
+              >
+                <div className="font-bold">Create Test Questions</div>
+                <BsFillJournalBookmarkFill className="text-2xl" />
               </Link>
             </div>
 
-            <div className="border w-[70%] h-[800px] p-6">
-              <div className="flex items-center justify-between">
+            <div className="border w-[70%] h-[800px] p-6 bg-white">
+              <div className="flex items-center justify-between mb-6">
                 <div className="border border-black px-3 py-2">
-                  <select name="" id="">
+                  <select className="bg-white border rounded px-2 py-1">
                     <option value="">Select Course</option>
-                    <option value="">HTML </option>
-                    <option value="">CSS</option>
-                    <option value="">JAVASCRIPT</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
                   </select>
                 </div>
-                <div className="font-bold border-2 border-black px-3 py-3">
-                  HTML 201:BEGINNERS GUIDE TO CODING
-                </div>
+                <div className="font-bold">HTML 201: BEGINNERS GUIDE TO CODING</div>
               </div>
-           {/* FORM SECTION FOR CREATING T3ST QUESTIONS */}
-              <form className="space-y-4 ">
-                
-                <div className="font-bold border-2 border-black  py-3 my-10">
+
+              <form className="space-y-4">
+                <div className="font-bold py-3 my-10">
                   <input
                     type="search"
-                    className="px-[350px]"
+                    className="w-full border rounded px-3 py-2"
                     placeholder="Write a Question"
                   />
                 </div>
                 <div className="flex justify-between">
-                    <div className="text-white">h</div>
-                    <div className="border border-black px-3 py-4">Choose File</div>
+                  <div className="text-white">h</div>
+                  <div className="border px-3 py-2 rounded bg-gray-100 text-gray-700 cursor-pointer">
+                    Choose File
+                  </div>
                 </div>
                 <div className="flex justify-between">
-                    <div className="text-white">h</div>
-                    <div className="text-sm">Select Correct option</div>
+                  <div className="text-white">h</div>
+                  <div className="text-sm">Select Correct option</div>
                 </div>
 
-
-                <div className="flex items-center justify-between">
-                  <div className="border-black border w-[400px] flex p-3">
-                    <input type="text" placeholder="OPTIONS A" />
+                {["A", "B", "C", "D"].map((option) => (
+                  <div key={option} className="flex items-center justify-between">
+                    <div className="w-[70%] border rounded px-3 py-2 flex">
+                      <input
+                        type="text"
+                        className="w-full outline-none"
+                        placeholder={`OPTION ${option}`}
+                      />
+                    </div>
+                    <input type="checkbox" />
                   </div>
-                  <input type="checkbox" />
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="border-black border w-[400px] flex p-3">
-                    <input type="text" placeholder="OPTIONS B" />
-                  </div>
-                  <input type="checkbox" />
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="border-black border w-[400px] flex p-3">
-                    <input type="text" placeholder="OPTIONS C" />
-                  </div>
-                  <input type="checkbox" />
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="border-black border w-[400px] flex p-3">
-                    <input type="text" placeholder="OPTIONS D" />
-                  </div>
-                  <input type="checkbox" />
-                </div>
+                ))}
               </form>
-
             </div>
           </div>
         </div>
